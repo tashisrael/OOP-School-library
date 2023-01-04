@@ -2,9 +2,6 @@
 
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
   <h3><b>OOP SCHOOL LIBRARY</b></h3>
 
@@ -21,11 +18,6 @@
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -38,9 +30,9 @@
 
 # 📖 [OOP School Library] <a name="about-project"></a>
 
-> OOP School Library is a ruby project.
+> OOP School Library is a ruby project used to record books stored in a library and who borrows them. The app allows users to add new students or teachers, new books, and save records of who borrowed a given book and the date it was borrowed.
 
-**[OOP School Library]** is a ruby project.
+**[OOP School Library]** OOP School Library is a ruby project used to record books stored in a library and who borrows them. The app allows users to add new students or teachers, new books, and save records of who borrowed a given book and the date it was borrowed.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -80,6 +72,8 @@ To get a local copy up and running, follow these steps.
 ## 🔭 Future Features <a name="future-features"></a>
 
 > To be added later
+- Setup associations
+- Add basic UI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,7 +101,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> We would like to thank Microverse
+> I would like to thank Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
