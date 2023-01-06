@@ -17,7 +17,7 @@ class App
   end
 
   def list_people
-    if @people.length.zero?
+    if @people.empty?
       puts 'There are no people in the library'
     else
       @people.each do |person|
