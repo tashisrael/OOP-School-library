@@ -6,7 +6,7 @@ require_relative 'handler'
 class LibrarySelf < Handler
   def start_console
     puts 'welcome to our school Library App!'
-  
+
     until list_of_options
       input = gets.chomp
       if input == '7'
@@ -17,8 +17,6 @@ class LibrarySelf < Handler
       option input
     end
   end
-
-
 
   def list_of_options
     puts
@@ -33,7 +31,6 @@ class LibrarySelf < Handler
   end
 
   def option(input)
-    
     case input
     when '1'
       list_all_books
