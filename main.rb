@@ -1,8 +1,6 @@
 require_relative 'app'
 require_relative 'handler'
 
-
-
 class LibrarySelf < Handler
   def start_console
     puts 'welcome to our school Library App!'
@@ -13,7 +11,6 @@ class LibrarySelf < Handler
         puts 'Thank You for using our school Library!'
         break
       end
-
       option input
     end
   end
