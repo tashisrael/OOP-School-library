@@ -62,6 +62,12 @@ To get a local copy up and running, follow these steps.
 - Twitter: [@twitterhandle](https://twitter.com/tashisrael)
 - Linkedin: [@linkedinhandle](https://www.linkedin.com/in/tashobya-israel-6a66b0181/l)
 
+👤 **Joseph Irirwanirira**
+
+- GitHub: [@githubhandle](https://github.com/Irirwanirira)
+- Twitter: [@twitterhandle](https://twitter.com/iri_joseph)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/Joseph Irirwanirira)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,8 +76,8 @@ To get a local copy up and running, follow these steps.
 ## 🔭 Future Features <a name="future-features"></a>
 
 > To be added later
-- Setup associations
-- Add basic UI
+- Preserve data
+- Add unit tests
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
