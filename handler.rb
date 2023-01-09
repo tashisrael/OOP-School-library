@@ -17,6 +17,21 @@ class Handler
     end
   end
 
+  def list_all_rentals
+    puts 'To see rentals enter the person ID: '
+    id = gets.chomp.to_i
+
+    puts 'Rented Books: '
+    @rentals.each do |rental|
+      if rental.person.id == id
+        puts "Person: #{rental.person.name} Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
+      else
+        puts
+        puts 'No record were found for the given ID'
+      end
+    end
+  end
+
   def create_person
     print 'press 1 to create a student, press 2 to create a teacher : '
     option = gets.chomp
@@ -33,9 +48,9 @@ class Handler
 
   def create_student
     puts 'create a new student'
-    print 'Age: '
+    print 'age: '
     age = gets.chomp.to_i
-    print 'Name: '
+    print 'name: '
     name = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase
@@ -53,11 +68,13 @@ class Handler
 
   def create_teacher
     puts 'create a new teacher'
-    print 'Age: '
+    print 'age: '
     age = gets.chomp.to_i
-    print 'Specialization: '
+    print 'Enter teacher specialization: '
     specialization = gets.chomp
-    teacher = Teacher.new(specialization, age, name)
+    print 'name: '
+    name = gets.chomp
+    teacher = Teacher.new(specialization: specialization, age: age, name: name)
     @persons << teacher
     puts 'Teacher created successfully'
   end
@@ -91,21 +108,5 @@ class Handler
     @rentals << rental
 
     puts 'Rental created successfully'
-  end
-
-  def list_all_rentals
-    list_all_persons
-    puts 'To see rentals enter the person ID: '
-    id = gets.chomp.to_i
-
-    puts 'Rented Books: '
-    @rentals.each do |rental|
-      if rental.person.id == id
-        puts "Person: #{rental.person.name} Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
-      else
-        puts
-        puts 'No record were found for the given ID'
-      end
-    end
   end
 end
