@@ -18,6 +18,7 @@ class Handler
   end
 
   def list_all_rentals
+    list_all_persons
     puts 'To see rentals enter the person ID: '
     id = gets.chomp.to_i
 
@@ -56,11 +57,11 @@ class Handler
     parent_permission = gets.chomp.downcase
     case parent_permission
     when 'n'
-      student = Student.new(age: age, name: name, parent_permission: parent_permission, classroom: @classroom)
+      student = Student.new(age, name, parent_permission: parent_permission)
       @persons << student
       puts 'Student doesn\'t have parent permission, can\'t rent books'
     when 'y'
-      student = Student.new(age: age, name: name, parent_permission: parent_permission, classroom: @classroom)
+      student = Student.new(age, name, parent_permission: parent_permission)
       @persons << student
       puts 'Student created successfully'
     end
@@ -74,9 +75,18 @@ class Handler
     specialization = gets.chomp
     print 'name: '
     name = gets.chomp
-    teacher = Teacher.new(specialization: specialization, age: age, name: name)
-    @persons << teacher
-    puts 'Teacher created successfully'
+    print 'Has parent permission? [Y/N]: '
+    parent_permission = gets.chomp.downcase
+    case parent_permission
+    when 'n'
+      teacher = Teacher.new(specialization, age, name, parent_permission: parent_permission)
+      @persons << teacher
+      puts 'Teacher created successfully'
+    when 'y'
+      teacher = Teacher.new(specialization, age, name, parent_permission: parent_permission)
+      @persons << teacher
+      puts 'Teacher created successfully'
+    end
   end
 
   def create_book
@@ -91,10 +101,9 @@ class Handler
   end
 
   def create_rental
-    puts 'select the book you want to rent by entering it\'s number'
-    @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
+    print 'Date: '
+    date = gets.chomp.to_s
 
-    book_id = gets.chomp.to_i
     puts 'select person from the list by its number'
     @persons.each_with_index do |person, index|
       puts "#{index} [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
@@ -102,10 +111,13 @@ class Handler
 
     person_id = gets.chomp.to_i
 
-    print 'Date: '
-    date = gets.chomp.to_s
+    puts 'select the book you want to rent by entering it\'s number'
+    @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
+
+    book_id = gets.chomp.to_i
+
     rental = Rental.new(date, @persons[person_id], @books[book_id])
-    @rentals << rental
+    @rentals.push(rental)
 
     puts 'Rental created successfully'
   end
