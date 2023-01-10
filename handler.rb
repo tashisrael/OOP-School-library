@@ -75,18 +75,9 @@ class Handler
     specialization = gets.chomp
     print 'name: '
     name = gets.chomp
-    print 'Has parent permission? [Y/N]: '
-    parent_permission = gets.chomp.downcase
-    case parent_permission
-    when 'n'
-      teacher = Teacher.new(specialization, age, name, parent_permission: parent_permission)
-      @persons << teacher
-      puts 'Teacher created successfully'
-    when 'y'
-      teacher = Teacher.new(specialization, age, name, parent_permission: parent_permission)
-      @persons << teacher
-      puts 'Teacher created successfully'
-    end
+    teacher = Teacher.new(specialization, age, name)
+    @persons << teacher
+    puts 'Teacher created successfully'
   end
 
   def create_book
