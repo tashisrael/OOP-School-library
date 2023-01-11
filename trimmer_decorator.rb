@@ -1,4 +1,4 @@
-require_relative('./base_decorator')
+require_relative './base_decorator'
 
 class Teacher < Person
   def initialize(specialization, age, name = 'Unknown', parent_permission: true)

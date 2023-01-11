@@ -22,18 +22,18 @@ class Handler
     puts 'To see rentals enter the person ID: '
     id = gets.chomp.to_i
 
-    puts 'Rented Books: '
-    @rentals.each do |rental|
+    puts "Rented Books for #{id}:"
+    test = false
+    @rentals.any? do |rental|
       if rental.person.id == id
+        test = true
         puts "Person: #{rental.person.name} Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
-      else
-        puts
-        puts 'No record were found for the given ID'
       end
     end
+    puts 'No record were found for the given ID' unless test
   end
 
-  def create_person
+def create_person
     print 'press 1 to create a student, press 2 to create a teacher : '
     option = gets.chomp
 
@@ -67,7 +67,7 @@ class Handler
     end
   end
 
-  def create_teacher
+def create_teacher
     puts 'create a new teacher'
     print 'age: '
     age = gets.chomp.to_i
@@ -91,7 +91,7 @@ class Handler
     puts "Book #{title} created successfully."
   end
 
-  def create_rental
+def create_rental
     print 'Date: '
     date = gets.chomp.to_s
 

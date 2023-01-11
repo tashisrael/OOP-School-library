@@ -1,9 +1,9 @@
-require_relative 'rental'
-require_relative 'classroom'
-require_relative 'teacher'
-require_relative 'person'
-require_relative 'book'
-require_relative 'student'
+require './rental'
+require './classroom'
+require './teacher'
+require './person'
+require './book'
+require './student'
 
 class App
   def initialize
