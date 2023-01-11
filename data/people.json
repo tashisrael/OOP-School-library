@@ -1,0 +1,32 @@
+[
+  {
+    "Domain": "Student",
+    "name": null,
+    "age": null,
+    "parent_permission": true
+  },
+  {
+    "Domain": "Student",
+    "name": null,
+    "age": "dgfbdfgvdf",
+    "parent_permission": true
+  },
+  {
+    "Domain": "Student",
+    "name": null,
+    "age": "fbdfvdfg",
+    "parent_permission": null
+  },
+  {
+    "Domain": "Student",
+    "name": "dfbdfgf",
+    "age": 543,
+    "parent_permission": true
+  },
+  {
+    "Domain": "Teacher",
+    "name": "gvgtgtfgv",
+    "age": 5665,
+    "specialization": "rgergregr"
+  }
+]

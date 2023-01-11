@@ -48,8 +48,8 @@ end
 
 def main
   app = LibrarySelf.new
-  app.start_console
   app.start
+  app.start_console
 end
 
 main

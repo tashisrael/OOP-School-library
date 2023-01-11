@@ -1,9 +1,9 @@
-require './rental'
-require './classroom'
-require './teacher'
 require './person'
+require './teacher'
 require './book'
 require './student'
+require './classroom'
+require './rental'
 require 'json'
 require './data/data'
 
