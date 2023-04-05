@@ -66,7 +66,7 @@ To get a local copy up and running, follow these steps.
 
 - GitHub: [@githubhandle](https://github.com/Irirwanirira)
 - Twitter: [@twitterhandle](https://twitter.com/iri_joseph)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/Joseph Irirwanirira)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/Joseph_Irirwanirira)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
